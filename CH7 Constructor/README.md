@@ -158,5 +158,8 @@ not used in the member function definition.
 vector<type> sample(vector size); //example vector<double> v(10);
 sample.push_back();
 sample.size();
+sample.begin();
+sample.end();
+sample.begin();
 
 ```
