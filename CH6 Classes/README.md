@@ -1,5 +1,5 @@
 ## Chapter Summary
-```=c++
+```c++
 SYNTAX
 class Class_Name
 {
