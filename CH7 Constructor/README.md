@@ -23,7 +23,7 @@ it is a member.
 Preferable method to define constructor.  
 ```=c++
 DayOfYear::DayOfYear(int monthValue, int dayValue)
- : month(monthValue), day(dayValue)
+ : month(monthValue), day(dayValue) 
 {/*Body intentionally empty*/}
 ```
 Calling a Constructor  
