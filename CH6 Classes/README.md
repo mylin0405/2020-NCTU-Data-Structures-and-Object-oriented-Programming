@@ -25,7 +25,7 @@ data value.
 * A member variable or a member function for a class can be either public or private.
 If it is public, it can be used outside the class. If it is private, it can be used only in  
 the definition of a member function.  
-* A function can have formal parameters of a class or structure type. A function can
+* A function can have formal parameters of a class or structure type. A function can 
 return values of a class or structure type.
 * A member function for a class can be overloaded in the same way as ordinary
 functions are overloaded.
