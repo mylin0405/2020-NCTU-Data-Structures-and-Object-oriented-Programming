@@ -91,4 +91,85 @@ Class_Name& Parameter_2);
 friend ostream& operator <<(ostream& Parameter_3,
 const Class_Name& Parameter_4);
 ```
+```
+class PFArrayD
+{
+public:
+ PFArrayD();      //Initializes with a caoacity of 50;
+ PFArrayD(const PFArrayD& pfaobject); //Copy constructor
+ PFArrayD& operator =(const PFAarrayD& rightSide);
+ ~PFArrayD();     //Destructor ;
+private:
+ double *a;
+ int capacity;
+ int used;
+};
 
+PFArrayD::PFArrayD() :capacity(50), used(0)
+{
+ a = new double[capacity];
+}
+PFArrayD::~PFAarrayD()
+{
+ delete [] a;
+}
+PFArrayD::PFArrayD(const PFArrayD& pfaObject) :capacity(pfaObject.getCapacity()), used(pfaObject.getNumberUsed())
+{
+ a = new double[capacity];
+ for(int i = 0; i < used; i++) a[i] = pfaObject.a[i];
+}
+PFArrayD& PFArrayD::operator =( const PFArrayD& rightSide)
+{
+ if (capacity != rightSide.capacity)
+ // handle self-assignment
+ {
+  delete [] a;
+  a = new double[rightSide.capacity];
+ }
+ capacity = rightSide.capacity;
+ used = rightSide.used;
+ for (int i = 0; i < used; i++) a[i] = rightSide.a[i]
+ return * this ///////////////?
+}
+```
+```=c++
+class Intpair
+{
+public:
+ Intpair operator++(); //Prefix version
+ Intpair operator++(int); //Postfix version
+
+private:
+ int first;
+ int second;
+};
+IntPair Intpair::operator++(int ignoreMe){ }
+IntPair Intpair::operator++() {}
+int main()
+{
+ Intpair a(1,2);
+ a++;
+ ++a;
+}
+```
+```=c++
+//Operator [] can only be member function
+class CharPair 
+{
+public:
+ char& operator[](int index);
+private:
+ char first;
+ char second;
+};
+char& Charpair::operator[] (int index)
+{
+ if (index == 1) return first;
+ else if (index == 2) return second;
+ else {
+  cout << "Illegal index value.\n";
+  exit(1);
+     }
+}
+
+```
