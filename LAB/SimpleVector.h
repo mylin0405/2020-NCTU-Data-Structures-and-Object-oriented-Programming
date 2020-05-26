@@ -25,7 +25,7 @@ public:
 	void my_insert(T value, int index);
 	void my_set(T value, int index);
 	void print();
-	void my_reserve(int my_capacity);
+	void my_reserve();
 	T& operator [](int index);
 
 private:
@@ -109,14 +109,15 @@ int SimpleVector<T>::my_empty()
 template <class T>
 void SimpleVector<T>::my_extend()
 {
-	my_reserve(capacity * 2);
+	capacity = capacity * 2;
+	my_reserve();
 }
 
 // Reserve the data and allocate new vector;
 template <class T>
-void SimpleVector<T>::my_reserve(int my_capacity)
+void SimpleVector<T>::my_reserve()
 {
-	T* new_vector = new T[my_capacity];
+	T* new_vector = new T[capacity];
 	for (int i = 0; i < size; i++)
 	{
 		new_vector[i] = vector[i];
