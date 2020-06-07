@@ -1,6 +1,6 @@
 /* HW3 SimpleVector
 * Author: Unfish0705
-* Last Modified: 2020/5/26
+* Last Modified: 2020/6/7
 */
 
 #include <iostream>
@@ -74,7 +74,11 @@ void SimpleVector<T>::my_push_back(T value)
 template<class T>
 void SimpleVector<T>::my_pop_back()
 {
-	size--;
+	if(size > 0)
+	{
+		size--;
+	} 
+	else size = 0;
 }
 
 // Return exist element numbers in the vector;
